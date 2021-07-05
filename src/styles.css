@@ -1,0 +1,63 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+window {
+  background-color: rgb(22, 22, 22);
+}
+a {
+  color: rgb(192, 105, 23);
+  text-decoration: none; /* no underline */
+}
+footer {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  bottom: 0px;
+  font-size: 20px;
+  text-align: center;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(22, 22, 22);
+  color: rgb(199, 199, 199);
+}
+.Task {
+  font-size: 20px;
+}
+document {
+  background-color: black;
+}
+
+i {
+  font-size: 40px;
+}
+
+.react-spinner {
+  animation: spin-animation 2s infinite;
+  display: inline-block;
+}
+
+.icn-spinner {
+  padding: 20px;
+  display: inline-block;
+}
+.icn-spinner:hover {
+  animation: spin-animation 2s infinite;
+}
+.icn-spinner:active {
+  color: rgb(51, 194, 204);
+  size: 50px;
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
