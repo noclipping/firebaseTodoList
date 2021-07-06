@@ -45,7 +45,7 @@ export default function AuthPage(props){
         localStorage.setItem("signInStatus", JSON.stringify(false));
         console.log(signedIn)
         firebase.auth().signOut().then(() => {
-            
+            props.signoutFunc()
           }).catch((error) => {
             // An error happened.
           });

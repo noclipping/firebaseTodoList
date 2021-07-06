@@ -81,15 +81,21 @@ export default function App(props) {
   function mySubmitHandler(event) {
     event.preventDefault();
 
-
-    setTasks([...tasks, { text: newTask, id: newId }]);
+    if(tasks){setTasks([...tasks, { text: newTask, id: newId }]);} else {setTasks([{text: newTask, id: newId}])}
+    
     setNewTask("");
     setNewId(uniqid());
   }
   console.log(tasks, "tasks2");
 
-
-  const tasksDOM = tasks.map((task) => {
+  function signoutFunc(){
+    setTasks([])
+    setUser(null)
+    if (localStorage.getItem("document")) {
+      setTasks(JSON.parse(localStorage.getItem("document")));
+    }
+  }
+  const tasksDOM = tasks?tasks.map((task) => {
     return (
       <Task
         key={uniqid()}
@@ -99,11 +105,12 @@ export default function App(props) {
         editTask={editTask}
       />
     );
-  });
+  }) : ([])
   return (
     <div className="App">
 
-      <AuthPage upperUserFunc={setMainUser}/>
+      <AuthPage upperUserFunc={setMainUser}
+      signoutFunc={signoutFunc}/>
       {tasksDOM}
       <hr />
       <br />
@@ -128,7 +135,7 @@ export default function App(props) {
           size="40"
           onClick={() => {
             if(user){docRef = firestore.doc(`users/${user.uid}`)}
-            localStorage.setItem("document", JSON.stringify(tasks));
+            if(!JSON.parse(localStorage.getItem("signInStatus"))){{localStorage.setItem("document", JSON.stringify(tasks)); }}
             //alert("saved!");
             if(user){docRef.set({User: user.displayName, UserId: user.uid, tasks: tasks}).then(console.log('saved')).catch(e=>console.log('eRR',e))}
          
