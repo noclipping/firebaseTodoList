@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/firebaseTodoList/static/css/main.232c714f.chunk.css",
-    "main.js": "/firebaseTodoList/static/js/main.044fd8f7.chunk.js",
-    "main.js.map": "/firebaseTodoList/static/js/main.044fd8f7.chunk.js.map",
+    "main.js": "/firebaseTodoList/static/js/main.da357f27.chunk.js",
+    "main.js.map": "/firebaseTodoList/static/js/main.da357f27.chunk.js.map",
     "runtime-main.js": "/firebaseTodoList/static/js/runtime-main.2e0ff4d4.js",
     "runtime-main.js.map": "/firebaseTodoList/static/js/runtime-main.2e0ff4d4.js.map",
     "static/js/2.de762656.chunk.js": "/firebaseTodoList/static/js/2.de762656.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.2e0ff4d4.js",
     "static/js/2.de762656.chunk.js",
     "static/css/main.232c714f.chunk.css",
-    "static/js/main.044fd8f7.chunk.js"
+    "static/js/main.da357f27.chunk.js"
   ]
 }
